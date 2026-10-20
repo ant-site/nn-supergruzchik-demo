@@ -1,0 +1,12 @@
+/* Кольцо: слова вращаются по кольцу вокруг планеты, скорость от прокрутки (по мотивам 21st.dev Planet Ring Text, Kinetic poster) */
+.ring{position:relative;height:230vh;background:#f2f5f9;width:100vw;margin-left:calc(50% - 50vw)}
+.ring__stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;isolation:isolate}
+.ring__cv{position:absolute;inset:0;width:100%;height:100%;display:block}
+.ring__top{position:absolute;left:0;right:0;top:clamp(76px,11vh,120px);display:flex;justify-content:center;align-items:center;gap:14px;padding:0 16px;font:600 .78rem/1 var(--f-text);letter-spacing:.2em;text-transform:uppercase;color:#6b7686;text-align:center}
+.ring__top::before,.ring__top::after{content:"";width:clamp(24px,6vw,72px);height:1px;background:#17b26a;opacity:.7}
+.ring__txt{position:absolute;left:0;right:0;bottom:clamp(20px,6vh,60px);padding:0 max(16px,5vw);display:grid;gap:10px;justify-items:center;text-align:center;color:var(--c-ink)}
+.ring__txt h2{font:800 clamp(1.4rem,3.4vw,2.4rem)/1.12 var(--f-display);margin:0;max-width:24ch;letter-spacing:-.02em}
+.ring__txt p{margin:0;max-width:52ch;color:#4d586a;font-size:clamp(.92rem,1.3vw,1.05rem);line-height:1.5}
+.ring__txt .ring__who{font-size:.84rem;color:#7a8596}
+@media (max-width:640px){.ring{height:200vh}.ring__txt{bottom:84px;gap:8px}.ring__top{font-size:.68rem;letter-spacing:.14em}.ring__txt h2{max-width:18ch}}
+@media (prefers-reduced-motion:reduce){.ring{height:auto}.ring__stick{position:relative;height:min(100svh,760px)}}
